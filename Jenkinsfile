@@ -8,5 +8,10 @@ pipeline {
               archive 'target/*.jar'
             }
         }   
+      stage('Unit Tests - Junit and Jacoco') {
+            steps {
+              sh "mvn test"
+            }      
+        }        
     }
 }
