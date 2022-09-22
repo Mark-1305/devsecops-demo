@@ -54,10 +54,10 @@
   <version>0.8.5</version>
   <executions>
   	<execution>
-            <goals>
-            		<goal>prepare-agent</goal>
-            </goals>
-      </execution>
+    <goals>
+        <goal>prepare-agent</goal>
+    </goals>
+    </execution>
       <execution>
             <id>report</id>
             <phase>test</phase>
@@ -67,7 +67,6 @@
         </execution>
     </executions>
  </plugin>
-</plugin>
+    </plugin>
 	</build>
-
 </project>
