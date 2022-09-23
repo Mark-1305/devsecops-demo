@@ -1,9 +1,5 @@
 pipeline {
   agent any
-  enviroment{
-    dockerhub-credentials('docker-hub')
-  }
-
   stages {
       stage('Build Artifact') {
             steps {
