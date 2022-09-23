@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  enviroment{
+    dockerhub-credentials('docker-hub')
+  }
 
   stages {
       stage('Build Artifact') {
@@ -21,11 +24,9 @@ pipeline {
         }  
       stage('Docker build and push'){
            steps{
-            withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
             sh 'printenv'
             sh 'docker build -t manoharshetty507/numeric-app:""$GIT_COMMIT"" .'
             sh 'docker push manoharshetty507/numeric-app:""$GIT_COMMIT""'     
-          }
         }
       }    
    }
